@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73C2BA121CAA170200EFE142 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73C2BA111CAA170200EFE142 /* region.plist */; };
+		73C2BA141CAA2D6E00EFE142 /* 城市选择器（button选择版）.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73C2BA131CAA2D6E00EFE142 /* 城市选择器（button选择版）.zip */; };
+		73C2BA161CAA2D7300EFE142 /* 城市选择器（PickerView）.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73C2BA151CAA2D7300EFE142 /* 城市选择器（PickerView）.zip */; };
 		DE675C32199DACF200BA9485 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE675C31199DACF200BA9485 /* Foundation.framework */; };
 		DE675C34199DACF200BA9485 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE675C33199DACF200BA9485 /* CoreGraphics.framework */; };
 		DE675C36199DACF200BA9485 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE675C35199DACF200BA9485 /* UIKit.framework */; };
 		DE675C3C199DACF200BA9485 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE675C3A199DACF200BA9485 /* InfoPlist.strings */; };
 		DE675C3E199DACF200BA9485 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE675C3D199DACF200BA9485 /* main.m */; };
-		DE675C42199DACF200BA9485 /* YLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE675C41199DACF200BA9485 /* YLAppDelegate.m */; };
+		DE675C42199DACF200BA9485 /* QsyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE675C41199DACF200BA9485 /* QsyAppDelegate.m */; };
 		DE675C44199DACF200BA9485 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE675C43199DACF200BA9485 /* Images.xcassets */; };
 		DE675C4B199DACF200BA9485 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE675C4A199DACF200BA9485 /* XCTest.framework */; };
 		DE675C4C199DACF200BA9485 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE675C31199DACF200BA9485 /* Foundation.framework */; };
 		DE675C4D199DACF200BA9485 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE675C35199DACF200BA9485 /* UIKit.framework */; };
 		DE675C55199DACF300BA9485 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE675C53199DACF300BA9485 /* InfoPlist.strings */; };
 		DE675C57199DACF300BA9485 /* LMComBoxViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE675C56199DACF300BA9485 /* LMComBoxViewTests.m */; };
+		DE675C66199DAD3800BA9485 /* LMComBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE675C63199DAD3800BA9485 /* LMComBoxView.m */; };
+		DE675C67199DAD3800BA9485 /* LMContainsLMComboxScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE675C65199DAD3800BA9485 /* LMContainsLMComboxScrollView.m */; };
+		DE675C6A199DAD6800BA9485 /* LMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE675C69199DAD6800BA9485 /* LMMainViewController.m */; };
+		DE675C6F199DAF7300BA9485 /* down_dark0.png in Resources */ = {isa = PBXBuildFile; fileRef = DE675C6E199DAF7300BA9485 /* down_dark0.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73C2BA111CAA170200EFE142 /* region.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = region.plist; path = ../LMComBoxView/region.plist; sourceTree = "<group>"; };
+		73C2BA131CAA2D6E00EFE142 /* 城市选择器（button选择版）.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "城市选择器（button选择版）.zip"; sourceTree = "<group>"; };
+		73C2BA151CAA2D7300EFE142 /* 城市选择器（PickerView）.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "城市选择器（PickerView）.zip"; sourceTree = "<group>"; };
 		DE675C2E199DACF200BA9485 /* LMComBoxView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMComBoxView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE675C31199DACF200BA9485 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE675C33199DACF200BA9485 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -40,14 +50,21 @@
 		DE675C3B199DACF200BA9485 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE675C3D199DACF200BA9485 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE675C3F199DACF200BA9485 /* LMComBoxView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LMComBoxView-Prefix.pch"; sourceTree = "<group>"; };
-		DE675C40199DACF200BA9485 /* YLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLAppDelegate.h; sourceTree = "<group>"; };
-		DE675C41199DACF200BA9485 /* YLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YLAppDelegate.m; sourceTree = "<group>"; };
+		DE675C40199DACF200BA9485 /* QsyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QsyAppDelegate.h; sourceTree = "<group>"; };
+		DE675C41199DACF200BA9485 /* QsyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QsyAppDelegate.m; sourceTree = "<group>"; };
 		DE675C43199DACF200BA9485 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DE675C49199DACF200BA9485 /* LMComBoxViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LMComBoxViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE675C4A199DACF200BA9485 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DE675C52199DACF300BA9485 /* LMComBoxViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LMComBoxViewTests-Info.plist"; sourceTree = "<group>"; };
 		DE675C54199DACF300BA9485 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE675C56199DACF300BA9485 /* LMComBoxViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMComBoxViewTests.m; sourceTree = "<group>"; };
+		DE675C62199DAD3800BA9485 /* LMComBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMComBoxView.h; sourceTree = "<group>"; };
+		DE675C63199DAD3800BA9485 /* LMComBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMComBoxView.m; sourceTree = "<group>"; };
+		DE675C64199DAD3800BA9485 /* LMContainsLMComboxScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMContainsLMComboxScrollView.h; sourceTree = "<group>"; };
+		DE675C65199DAD3800BA9485 /* LMContainsLMComboxScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMContainsLMComboxScrollView.m; sourceTree = "<group>"; };
+		DE675C68199DAD6800BA9485 /* LMMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMainViewController.h; sourceTree = "<group>"; };
+		DE675C69199DAD6800BA9485 /* LMMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMainViewController.m; sourceTree = "<group>"; };
+		DE675C6E199DAF7300BA9485 /* down_dark0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_dark0.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +94,11 @@
 		DE675C25199DACF200BA9485 = {
 			isa = PBXGroup;
 			children = (
+				DE675C30199DACF200BA9485 /* Frameworks */,
+				DE675C6B199DADB900BA9485 /* Data */,
+				DE675C61199DAD3800BA9485 /* LMComBox */,
 				DE675C37199DACF200BA9485 /* LMComBoxView */,
 				DE675C50199DACF300BA9485 /* LMComBoxViewTests */,
-				DE675C30199DACF200BA9485 /* Frameworks */,
 				DE675C2F199DACF200BA9485 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,9 +126,12 @@
 		DE675C37199DACF200BA9485 /* LMComBoxView */ = {
 			isa = PBXGroup;
 			children = (
-				DE675C40199DACF200BA9485 /* YLAppDelegate.h */,
-				DE675C41199DACF200BA9485 /* YLAppDelegate.m */,
-				DE675C43199DACF200BA9485 /* Images.xcassets */,
+				DE675C40199DACF200BA9485 /* QsyAppDelegate.h */,
+				DE675C41199DACF200BA9485 /* QsyAppDelegate.m */,
+				DE675C68199DAD6800BA9485 /* LMMainViewController.h */,
+				DE675C69199DAD6800BA9485 /* LMMainViewController.m */,
+				73C2BA131CAA2D6E00EFE142 /* 城市选择器（button选择版）.zip */,
+				73C2BA151CAA2D7300EFE142 /* 城市选择器（PickerView）.zip */,
 				DE675C38199DACF200BA9485 /* Supporting Files */,
 			);
 			path = LMComBoxView;
@@ -119,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DE675C39199DACF200BA9485 /* LMComBoxView-Info.plist */,
+				DE675C43199DACF200BA9485 /* Images.xcassets */,
 				DE675C3A199DACF200BA9485 /* InfoPlist.strings */,
 				DE675C3D199DACF200BA9485 /* main.m */,
 				DE675C3F199DACF200BA9485 /* LMComBoxView-Prefix.pch */,
@@ -142,6 +165,26 @@
 				DE675C53199DACF300BA9485 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE675C61199DAD3800BA9485 /* LMComBox */ = {
+			isa = PBXGroup;
+			children = (
+				DE675C62199DAD3800BA9485 /* LMComBoxView.h */,
+				DE675C63199DAD3800BA9485 /* LMComBoxView.m */,
+				DE675C64199DAD3800BA9485 /* LMContainsLMComboxScrollView.h */,
+				DE675C65199DAD3800BA9485 /* LMContainsLMComboxScrollView.m */,
+			);
+			path = LMComBox;
+			sourceTree = "<group>";
+		};
+		DE675C6B199DADB900BA9485 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DE675C6E199DAF7300BA9485 /* down_dark0.png */,
+				73C2BA111CAA170200EFE142 /* region.plist */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +263,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73C2BA121CAA170200EFE142 /* region.plist in Resources */,
 				DE675C3C199DACF200BA9485 /* InfoPlist.strings in Resources */,
+				73C2BA161CAA2D7300EFE142 /* 城市选择器（PickerView）.zip in Resources */,
 				DE675C44199DACF200BA9485 /* Images.xcassets in Resources */,
+				DE675C6F199DAF7300BA9485 /* down_dark0.png in Resources */,
+				73C2BA141CAA2D6E00EFE142 /* 城市选择器（button选择版）.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE675C67199DAD3800BA9485 /* LMContainsLMComboxScrollView.m in Sources */,
 				DE675C3E199DACF200BA9485 /* main.m in Sources */,
-				DE675C42199DACF200BA9485 /* YLAppDelegate.m in Sources */,
+				DE675C6A199DAD6800BA9485 /* LMMainViewController.m in Sources */,
+				DE675C42199DACF200BA9485 /* QsyAppDelegate.m in Sources */,
+				DE675C66199DAD3800BA9485 /* LMComBoxView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -347,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -361,6 +411,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LMComBoxView/LMComBoxView-Prefix.pch";
 				INFOPLIST_FILE = "LMComBoxView/LMComBoxView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_BUNDLE_IDENTIFIER = qsy.QsyComBoxView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -374,6 +426,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LMComBoxView/LMComBoxView-Prefix.pch";
 				INFOPLIST_FILE = "LMComBoxView/LMComBoxView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_BUNDLE_IDENTIFIER = qsy.QsyComBoxView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -438,6 +492,7 @@
 				DE675C5C199DACF300BA9485 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE675C5D199DACF300BA9485 /* Build configuration list for PBXNativeTarget "LMComBoxViewTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +501,7 @@
 				DE675C5F199DACF300BA9485 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

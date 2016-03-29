@@ -1,20 +1,26 @@
 //
-//  YLAppDelegate.m
+//  qsyAppDelegate.m
 //  LMComBoxView
 //
-//  Created by tkinghr on 14-8-15.
-//  Copyright (c) 2014年 YL. All rights reserved.
+//  Created by qsy on 14-8-15.
+//  Copyright (c) 2014年 qsy. All rights reserved.
 //
 
-#import "YLAppDelegate.h"
+#import "QsyAppDelegate.h"
+#import "LMMainViewController.h"
 
-@implementation YLAppDelegate
+@implementation QsyAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    NSLog(@"%f",self.window.bounds.size.height);
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    LMMainViewController *mainVc = [[LMMainViewController alloc]init];
+    self.window.rootViewController = mainVc;
     [self.window makeKeyAndVisible];
     return YES;
 }

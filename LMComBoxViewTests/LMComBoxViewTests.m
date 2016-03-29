@@ -2,8 +2,8 @@
 //  LMComBoxViewTests.m
 //  LMComBoxViewTests
 //
-//  Created by tkinghr on 14-8-15.
-//  Copyright (c) 2014年 YL. All rights reserved.
+//  Created by qsy on 14-8-15.
+//  Copyright (c) 2014年 qsy. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
