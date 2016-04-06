@@ -18,14 +18,21 @@
     LMContainsLMComboxScrollView *bgScrollView;
     NSMutableDictionary *addressDict;   //地址选择字典
     NSArray *areaTotalArray;//总的数组
-    NSArray *province;
+    NSArray *province;//默认的省数组
     NSArray *city;
     NSArray *district;
     
     NSDictionary *proviceCode;
     NSDictionary *cityCode;
     NSDictionary *districtsCode;
-    
+//    获取到默认的省对应的市数组
+    NSArray *defaultCitysNameArray;
+//    NSArray *defaultCityRegionArray;
+    NSArray *defaultRegionsNameArray;
+//    默认省市区的3个序号
+    int provinceNum;
+    int cityNum;
+    int districtNum;
 // 获取到该省行对应的城市的所有数据（包括区）
     NSArray *cityArray;
     
@@ -49,7 +56,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     //解析全国省市区信息
     NSString *plistPath=[[NSBundle mainBundle] pathForResource:@"region" ofType:@"plist"];
@@ -90,10 +96,10 @@
         
     }
     
-    district = [[NSArray alloc] initWithArray:districtsNameArray];;
+    district = [[NSArray alloc] initWithArray:districtsNameArray];
     districtsCode = [[NSDictionary alloc] initWithDictionary:districtsCodeDic];
 
-//    将省市区加到字典中
+//  将省市区加到字典中
     addressDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                    province,@"province",
                    city,@"city",
@@ -122,6 +128,12 @@
     [bgScrollView addSubview:titleLable];
     
     NSArray *keys = [NSArray arrayWithObjects:@"province",@"city",@"area", nil];
+    
+    //    设置默认的序号
+    provinceNum = 3;
+    cityNum = 3;
+    districtNum = 5;
+    
     for(NSInteger i=0;i<3;i++)
     {
         LMComBoxView *comBox = [[LMComBoxView alloc]initWithFrame:CGRectMake(50+(63+3)*i, 55, 63, 24)];
@@ -131,10 +143,70 @@
         comBox.titlesList = itemsArray;
         comBox.delegate = self;
         comBox.supView = bgScrollView;
-        [comBox defaultSettings];
         comBox.tag = kDropDownListTag + i;
+        [comBox defaultSettings];
         [bgScrollView addSubview:comBox];
     }
+      NSLog(@"===%@===%@===%@",selectedProvince,selectedCity,selectedArea);
+}
+
+#pragma mark -LMComBoxViewDelegate 设置默认的数据：indexNum为所在tableview数据源的序号
+- (void)setDefaultCityNum:(int)indexNum inCombox:(LMComBoxView *)_combox {
+    NSInteger tag = _combox.tag -kDropDownListTag;
+    switch (tag) {//设置默认省
+        case 0:
+//    获取到省的数据源province和该省对应的位置index
+            indexNum = provinceNum;
+            _combox.titleLabel.text = [province objectAtIndex:indexNum];
+            selectedProvince =_combox.titleLabel.text;
+            break;
+        case 1://设置市
+//    获取省对应市的数据源和对应的index
+            indexNum = cityNum;
+            [self getDefaultCitysArray:indexNum];
+            //刷新区
+            _combox.titlesList = [[NSArray alloc]initWithArray:defaultCitysNameArray].mutableCopy;
+            NSLog(@"city---------%@",city);
+            [_combox reloadData];
+             _combox.titleLabel.text = [defaultCitysNameArray objectAtIndex:indexNum];
+             selectedCity = _combox.titleLabel.text;
+            break;
+        case 2://设置区
+//            获取市对应区的数据源和对应的index
+            indexNum = districtNum;
+            [self getDefaultRegionsArray:indexNum];
+            _combox.titlesList = [[NSArray alloc]initWithArray:defaultRegionsNameArray].mutableCopy;
+            NSLog(@"district========%@",district);
+            [_combox reloadData];
+            _combox.titleLabel.text = [defaultRegionsNameArray objectAtIndex:indexNum];
+             selectedArea = _combox.titleLabel.text;
+            break;
+        default:
+            break;
+    }
+}
+
+- (void )getDefaultCitysArray:(int)indexNum {
+    NSDictionary *cityTempDic = [areaTotalArray objectAtIndex:provinceNum];
+    NSArray *citysArray =cityTempDic[@"citys"];
+    NSMutableArray *cityNameArray = [[NSMutableArray alloc]init];
+    for (NSDictionary *dic in citysArray) {
+        [cityNameArray addObject:dic[@"cityName"]];
+        
+    }
+    defaultCitysNameArray = [[NSArray alloc]initWithArray:cityNameArray];
+}
+
+- (void )getDefaultRegionsArray:(int)indexNum {
+    NSDictionary *cityTempDic = [areaTotalArray objectAtIndex:provinceNum];
+    NSArray *citysArray =cityTempDic[@"citys"];
+    NSDictionary *rempArr = [citysArray objectAtIndex:cityNum];
+    NSArray *regionArray = rempArr[@"cityRegion"];
+    NSMutableArray *regionNameArray = [[NSMutableArray alloc]init];
+    for (NSDictionary *dic in regionArray) {
+        [regionNameArray addObject:dic[@"regionName"]];
+    }
+    defaultRegionsNameArray = [[NSArray alloc]initWithArray:regionNameArray];
 }
 
 #pragma mark -LMComBoxViewDelegate
@@ -207,6 +279,7 @@
                            city,@"city",
                            district,@"area",nil];
             LMComBoxView *areaCombox = (LMComBoxView *)[bgScrollView viewWithTag:tag + 1 + kDropDownListTag];
+            
             areaCombox.titlesList = [NSMutableArray arrayWithArray:[addressDict objectForKey:@"area"]];
             [areaCombox reloadData];
             
@@ -222,24 +295,9 @@
             break;
     }
     NSLog(@"===%@===%@===%@",selectedProvince,selectedCity,selectedArea);
+    
 }
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
