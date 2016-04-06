@@ -18,15 +18,16 @@
 
 @class LMComBoxView;
 @protocol LMComBoxViewDelegate <NSObject>
-
+//选择单个tableView的cell
 -(void)selectAtIndex:(int)index inCombox:(LMComBoxView *)_combox;
+//设置默认的省、市和区
+- (void)setDefaultCityNum:(int)indexNum inCombox:(LMComBoxView *)_combox;
+
 
 @end
 
 @interface LMComBoxView : UIView<UITableViewDataSource,UITableViewDelegate>
-{
-    UILabel *titleLabel;
-}
+
 @property(nonatomic,assign)BOOL isOpen;
 @property(nonatomic,strong)UITableView *listTable;
 @property(nonatomic,strong)NSMutableArray *titlesList;
@@ -36,6 +37,7 @@
 @property(nonatomic,copy)NSString *arrowImgName;//箭头图标名称
 @property(nonatomic,assign)id<LMComBoxViewDelegate>delegate;
 @property(nonatomic,strong)UIView *supView;
+@property (nonatomic, strong) UILabel *titleLabel;
 
 -(void)defaultSettings;
 -(void)reloadData;

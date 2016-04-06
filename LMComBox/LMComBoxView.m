@@ -41,12 +41,12 @@
     [btn addTarget:self action:@selector(tapAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:btn];
     
-    titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(2, 0, self.frame.size.width-imgW - 5 - 2, self.frame.size.height)];
-    titleLabel.font = [UIFont systemFontOfSize:11];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.textAlignment = NSTextAlignmentLeft;
-    titleLabel.textColor = kTextColor;
-    [btn addSubview:titleLabel];
+    _titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(2, 0, self.frame.size.width-imgW - 5 - 2, self.frame.size.height)];
+    _titleLabel.font = [UIFont systemFontOfSize:11];
+    _titleLabel.backgroundColor = [UIColor clearColor];
+    _titleLabel.textAlignment = NSTextAlignmentLeft;
+    _titleLabel.textColor = kTextColor;
+    [btn addSubview:_titleLabel];
     
     _arrow = [[UIImageView alloc]initWithFrame:CGRectMake(btn.frame.size.width - imgW - 2, (self.frame.size.height-imgH)/2.0, imgW, imgH)];
     _arrow.image = [UIImage imageNamed:_arrowImgName];
@@ -63,15 +63,23 @@
     _listTable.layer.borderColor = kBorderColor.CGColor;
     
     [_supView addSubview:_listTable];
+    _titleLabel.text = [_titlesList objectAtIndex:_defaultIndex];
     
-    titleLabel.text = [_titlesList objectAtIndex:_defaultIndex];
+//   设置默认的展示内容：获取到该省/市/区所在的位置序号
+    if ([_delegate respondsToSelector:@selector(setDefaultCityNum:inCombox:)]) {
+        [self.delegate setDefaultCityNum:_defaultIndex inCombox:self];
+    }
+    
 }
+
+
 
 //刷新视图
 -(void)reloadData
 {
     [_listTable reloadData];
-    titleLabel.text = [_titlesList objectAtIndex:_defaultIndex];
+    _defaultIndex = 0;//设置都是默认为0的数据
+    _titleLabel.text = [_titlesList objectAtIndex:_defaultIndex];
 }
 
 //关闭父视图上面的其他combox
@@ -191,7 +199,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    titleLabel.text = [_titlesList objectAtIndex:indexPath.row];
+    _titleLabel.text = [_titlesList objectAtIndex:indexPath.row];
     _isOpen = YES;
     [self tapAction];
     if([_delegate respondsToSelector:@selector(selectAtIndex:inCombox:)])
