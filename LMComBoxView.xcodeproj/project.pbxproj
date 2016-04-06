@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3033C9911CB240DA005D1B05 /* 城市选择分站：tableview热门历史搜索版.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3033C9901CB240DA005D1B05 /* 城市选择分站：tableview热门历史搜索版.zip */; };
+		3033C9911CB240DA005D1B05 /* 城市选择分站：tableview热门历史搜索版（仿美团）.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3033C9901CB240DA005D1B05 /* 城市选择分站：tableview热门历史搜索版（仿美团）.zip */; };
 		73C2BA121CAA170200EFE142 /* region.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73C2BA111CAA170200EFE142 /* region.plist */; };
 		73C2BA141CAA2D6E00EFE142 /* 城市选择器（button选择版）.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73C2BA131CAA2D6E00EFE142 /* 城市选择器（button选择版）.zip */; };
 		73C2BA161CAA2D7300EFE142 /* 城市选择器（PickerView）.zip in Resources */ = {isa = PBXBuildFile; fileRef = 73C2BA151CAA2D7300EFE142 /* 城市选择器（PickerView）.zip */; };
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3033C9901CB240DA005D1B05 /* 城市选择分站：tableview热门历史搜索版.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "城市选择分站：tableview热门历史搜索版.zip"; sourceTree = "<group>"; };
+		3033C9901CB240DA005D1B05 /* 城市选择分站：tableview热门历史搜索版（仿美团）.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "城市选择分站：tableview热门历史搜索版（仿美团）.zip"; sourceTree = "<group>"; };
 		73C2BA111CAA170200EFE142 /* region.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = region.plist; path = ../LMComBoxView/region.plist; sourceTree = "<group>"; };
 		73C2BA131CAA2D6E00EFE142 /* 城市选择器（button选择版）.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "城市选择器（button选择版）.zip"; sourceTree = "<group>"; };
 		73C2BA151CAA2D7300EFE142 /* 城市选择器（PickerView）.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "城市选择器（PickerView）.zip"; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 				DE675C69199DAD6800BA9485 /* LMMainViewController.m */,
 				73C2BA131CAA2D6E00EFE142 /* 城市选择器（button选择版）.zip */,
 				73C2BA151CAA2D7300EFE142 /* 城市选择器（PickerView）.zip */,
-				3033C9901CB240DA005D1B05 /* 城市选择分站：tableview热门历史搜索版.zip */,
+				3033C9901CB240DA005D1B05 /* 城市选择分站：tableview热门历史搜索版（仿美团）.zip */,
 				DE675C38199DACF200BA9485 /* Supporting Files */,
 			);
 			path = LMComBoxView;
@@ -268,7 +268,7 @@
 			files = (
 				73C2BA121CAA170200EFE142 /* region.plist in Resources */,
 				DE675C3C199DACF200BA9485 /* InfoPlist.strings in Resources */,
-				3033C9911CB240DA005D1B05 /* 城市选择分站：tableview热门历史搜索版.zip in Resources */,
+				3033C9911CB240DA005D1B05 /* 城市选择分站：tableview热门历史搜索版（仿美团）.zip in Resources */,
 				73C2BA161CAA2D7300EFE142 /* 城市选择器（PickerView）.zip in Resources */,
 				DE675C44199DACF200BA9485 /* Images.xcassets in Resources */,
 				DE675C6F199DAF7300BA9485 /* down_dark0.png in Resources */,
