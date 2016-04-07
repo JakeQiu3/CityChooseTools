@@ -132,7 +132,7 @@
     //    设置默认的序号
     provinceNum = 3;
     cityNum = 3;
-    districtNum = 5;
+    districtNum = 3;
     
     for(NSInteger i=0;i<3;i++)
     {
@@ -170,20 +170,31 @@
             [_combox reloadData];
              _combox.titleLabel.text = [defaultCitysNameArray objectAtIndex:indexNum];
              selectedCity = _combox.titleLabel.text;
+            [self modifyCityArray];
+            [addressDict setObject:_combox.titlesList forKey:@"city"];
             break;
         case 2://设置区
 //            获取市对应区的数据源和对应的index
             indexNum = districtNum;
             [self getDefaultRegionsArray:indexNum];
             _combox.titlesList = [[NSArray alloc]initWithArray:defaultRegionsNameArray].mutableCopy;
-            NSLog(@"district========%@",district);
             [_combox reloadData];
             _combox.titleLabel.text = [defaultRegionsNameArray objectAtIndex:indexNum];
              selectedArea = _combox.titleLabel.text;
+            [addressDict setObject:_combox.titlesList forKey:@"area"];
+            NSLog(@"region---------%@",[addressDict objectForKey:@"area"]);
             break;
         default:
             break;
     }
+}
+
+- (void)modifyCityArray{
+    NSDictionary *proviceDic = areaTotalArray[provinceNum];
+    NSArray *tempArray = proviceDic[@"citys"];
+    cityArray = [[NSArray alloc] initWithArray:tempArray];
+    NSLog(@"city:---------%@",cityArray);
+    
 }
 
 - (void )getDefaultCitysArray:(int)indexNum {
