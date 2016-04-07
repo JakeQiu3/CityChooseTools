@@ -109,7 +109,6 @@
     selectedCity = [city objectAtIndex:0];
     selectedArea = [district objectAtIndex:0];
     
-    
     bgScrollView = [[LMContainsLMComboxScrollView alloc]initWithFrame:CGRectMake(0, 20,  [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height -20)];
     bgScrollView.backgroundColor = [UIColor cyanColor];
     bgScrollView.showsVerticalScrollIndicator = NO;
@@ -131,8 +130,8 @@
     
     //    设置默认的序号
     provinceNum = 3;
-    cityNum = 3;
-    districtNum = 3;
+    cityNum = 13;
+    districtNum = 9;
     
     for(NSInteger i=0;i<3;i++)
     {
